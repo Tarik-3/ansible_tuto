@@ -1,0 +1,11 @@
+- name: configure nginx
+  hosts: vm
+  tasks:
+  - name: upload nginx
+    apt:
+      name: nginx
+      state: latest
+  - name: running nginx
+    service:
+      name: nginx
+      state: started
